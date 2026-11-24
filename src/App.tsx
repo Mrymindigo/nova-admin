@@ -1,5 +1,17 @@
 import AppRoutes from './routes/AppRoutes';
+import {GlobalStyle} from './shared/GlobalStyles'
+import { ThemeProvider } from 'styled-components';
+import {themes} from './shared/theme/index';
+import {DarkLightMode} from './types/Enums/DarkLightMode'
 
-const App = () => <AppRoutes />;
+export const App = () => {
+    //replace redux
+  const mode = DarkLightMode.Light;
 
-export default App;
+  return (
+    <ThemeProvider theme={themes[mode]}>
+      <GlobalStyle />
+      <AppRoutes />
+    </ThemeProvider>
+  );
+};
