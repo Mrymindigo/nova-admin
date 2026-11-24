@@ -1,21 +1,5 @@
-import './App.css'
-import{RouterProvider} from 'react-router'
-import {ScrollRestoration} from 'react-router'
-// import router from './routes/routes'
+import AppRoutes from './routes/AppRoutes';
 
+const App = () => <AppRoutes />;
 
-type RouterProvider ={
-
-}
-function App() {
-  return (
-    <>
-    {/* <RouterProvider router = {router}>
-      <ScrollRestoration />  
-    </RouterProvider> */}
-    hii
-    </>
-  )
-}
-
-export default App
+export default App;
