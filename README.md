@@ -1,32 +1,66 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+# NOVA Admin
 
-Currently, two official plugins are available:
+> پنل مدیریت فروشگاه NOVA با React، Vite و TypeScript (چالش فنی Frontend).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Admin panel for the NOVA online store. Built as part of a frontend technical
+challenge. Uses [FakeStoreAPI](https://fakestoreapi.com) as a mock backend.
 
-## React Compiler
+## Tech Stack
+React 18 · Vite · TypeScript · Redux Toolkit · React Router · Axios ·
+styled-components · Formik + Yup
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
+- [ ] Login with route protection
+- [ ] Products list (search, loading / error / empty states)
+- [ ] Product create form
+- [ ] Users list (search, loading / error / empty states)
+- [ ] User create form
+- [ ] FA/EN dictionary with RTL/LTR switching
+- [ ] Light/Dark theme
 
-## Expanding the Oxlint configuration
+## Getting Started
+### Prerequisites
+- Node.js >= 20
+- npm >= 10
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+### Installation
+```bash
+git clone <repo-url>
+cd nova-admin
+cp .env.example .env
+npm install
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+### Scripts
+ `npm run dev` : Start dev server         
+ `npm run build`:Production build         
+ `npm run preview`:Preview production build 
+ `npm run lint`:Run ESLint               
+
+## Environment Variables
+| Name                | Description         | Example                    |
+| ------------------- | ------------------- | -------------------------- |
+| `VITE_API_BASE_URL` | Base URL of the API | `https://fakestoreapi.com` |
+
+## Project Structure
+🚧 In progress
+
+## State Management
+🚧 In progress
+
+## API Layer
+🚧 In progress
+
+## FakeStoreAPI Limitations & Decisions
+🚧 In progress
+
+## Assumptions & Out of Scope
+🚧 In progress
+
+## Time Spent
+🚧 In progress
+
+## Screenshots
+🚧 In progress
