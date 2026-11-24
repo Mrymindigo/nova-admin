@@ -7,6 +7,7 @@ export interface AppTheme {
     secondary: string;    
     sidebar: string;
     text: string;
+    textSecondary:string;
     textMuted: string;
     border: string;
     success: string;

@@ -7,7 +7,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
-    font-family: 'Vazirmatn Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    font-family: 'Vazirmatn Variable', sans-serif;
     line-height: 1.6;
   }
 `;
