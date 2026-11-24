@@ -1,5 +1,3 @@
-# React + TypeScript + Vite
-
 # NOVA Admin
 
 > پنل مدیریت فروشگاه NOVA با React، Vite و TypeScript (چالش فنی Frontend).
