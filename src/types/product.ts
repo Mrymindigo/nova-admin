@@ -10,4 +10,7 @@ export interface Product {
 
 export interface ProductTableProps {
   products: Product[];
+  onView: (product: Product) => void;
+  onEdit?: (product: Product) => void;
+  onDelete: (product: Product) => void;
 }

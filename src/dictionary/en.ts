@@ -10,6 +10,9 @@ export const en = {
         retry: 'Try again',
         actions: 'Actions',
         error: 'Something went wrong',
+        close: 'Close',
+        delete: 'Delete',
+        deleting: 'Deleting...',
     },
     auth: {
         title: 'Admin Panel',
@@ -31,11 +34,25 @@ export const en = {
         add: 'Add product',
         searchPlaceholder: 'Search products...',
         empty: 'No products found',
+        noResults: 'No products match your search',
         columns: {
             image: 'Image',
             title: 'Title',
             price: 'Price',
             category: 'Category',
+            actions: 'Actions',
+        },
+        actions: { view: 'View', edit: 'Edit', delete: 'Delete' },
+        details: {
+            description: 'Description',
+            category: 'Category',
+            price: 'Price',
+            rating: 'Rating',
+        },
+        deleteConfirm: {
+            title: 'Delete product',
+            message: 'Are you sure you want to delete "{{title}}"?',
+            error: 'Could not delete the product. Please try again.',
         },
     },
     settings: {

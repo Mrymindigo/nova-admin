@@ -20,7 +20,7 @@ color:${({ theme }) => theme.colors.secondary};
 cursor:pointer;
 text-decoration-line: none;
 &:hover{
-background: ${({ theme }) => theme.colors.sidebarHover};
+background: ${({ theme }) => theme.colors.bgHover};
 }
 `
 

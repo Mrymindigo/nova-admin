@@ -8,7 +8,7 @@ export const lightTheme: AppTheme = {
     background: '#f4f7db',
     secondary: '#ffffff',
     sidebar: '#0a1936',
-    sidebarHover: '#637eb4',
+    bgHover: '#637eb4',
     text: '#0f1f3d',
     textSecondary:'#7186b0cb',
     textMuted: '#64748b',

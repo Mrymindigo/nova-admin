@@ -9,6 +9,9 @@ export const fa = {
         retry: 'تلاش مجدد',
         actions: 'عملیات',
         error: 'خطایی رخ داده است',
+        close: 'بستن',
+        delete: 'حذف',
+        deleting: 'در حال حذف...',
     },
     auth: {
         title: 'پنل مدیریت',
@@ -30,11 +33,25 @@ export const fa = {
         add: 'افزودن محصول',
         searchPlaceholder: 'جستجو در محصولات...',
         empty: 'محصولی یافت نشد',
+        noResults: 'محصولی با این جستجو پیدا نشد',
         columns: {
             image: 'تصویر',
             title: 'عنوان',
             price: 'قیمت',
             category: 'دسته‌بندی',
+            actions: 'عملیات',
+        },
+        actions: { view: 'مشاهده', edit: 'ویرایش', delete: 'حذف' },
+        details: {
+            description: 'توضیحات',
+            category: 'دسته‌بندی',
+            price: 'قیمت',
+            rating: 'امتیاز',
+        },
+        deleteConfirm: {
+            title: 'حذف محصول',
+            message: 'آیا از حذف «{{title}}» مطمئن هستید؟',
+            error: 'حذف محصول انجام نشد. دوباره تلاش کنید.',
         },
     },
     settings: {

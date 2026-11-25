@@ -31,7 +31,7 @@ export const Tr = styled.tr`
   }
 
   &:hover td {
-    background: ${({ theme }) => theme.colors.background};
+    background: ${({ theme }) => theme.colors.bgHover};
   }
 `;
 
@@ -64,4 +64,46 @@ export const ProductImage = styled.img`
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+`;
+
+
+export const ActionsCell = styled(Td)`
+  white-space: nowrap;
+`;
+
+export const ActionsGroup = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+`;
+
+export const ActionButton = styled.button<{ $variant?: 'danger' }>`
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: ${({ theme }) => theme.radius.sm};
+  border: 1px solid
+    ${({ $variant, theme }) => ($variant === 'danger' ? theme.colors.dangerBg : theme.colors.border)};
+  background: ${({ $variant, theme }) =>
+        $variant === 'danger' ? theme.colors.dangerBg : theme.colors.secondary};
+  color: ${({ $variant, theme }) =>
+        $variant === 'danger' ? theme.colors.danger : theme.colors.text};
+  transition: border-color 0.2s ease;
+
+  &:hover:not(:disabled) {
+    border-color: ${({ theme }) => theme.colors.accent};
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  &:focus-visible {
+    outline: 2px solid ${({ theme }) => theme.colors.accent};
+    outline-offset: 2px;
+  }
 `;

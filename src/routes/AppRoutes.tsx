@@ -3,6 +3,7 @@ import AdminLayout from '../components/layout/AdminLayout';
 import LoginPage from '../pages/login/index';
 import ProductsPage from '../pages/products/index';
 import UsersPage from '../pages/users/index';
+import SettingPage from '../pages/setting/index'
 import NotFoundPage from '../pages/notFound/index';
 import ProtectedRoute from './ProtectedRoute';
 import { RoutePath } from '../types/Enums/RoutePath';
@@ -16,6 +17,7 @@ const AppRoutes = () => (
         <Route path={RoutePath.Dashboard} element={<Navigate to={RoutePath.Products} replace />} />
         <Route path={RoutePath.Products} element={<ProductsPage />} />
         <Route path={RoutePath.Users} element={<UsersPage />} />
+        <Route path={RoutePath.Setting} element={<SettingPage />} />
       </Route>
     </Route>
 
