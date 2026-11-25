@@ -1,12 +1,12 @@
 import { useTranslation } from '../../../utils/services/useTranslation';
 import { menuItems } from './SidebarMenuItem';
 import SidebarSettings from './setting/index';
-import SidebarProfile from '../profile/index';
-import { Aside, SidebarNav, Logo , LogoIcon , LogoText } from './SidebarStyle';
+import AdminProfile from '../profile/index';
+import { Aside, SidebarNav, Logo, LogoIcon, LogoText ,SidebarProfileContainer } from './SidebarStyle';
 
 import { HiMiniShoppingBag } from "react-icons/hi2";
 
-export default function Sidebar (){
+export default function Sidebar() {
   const { t } = useTranslation();
 
   return (
@@ -31,7 +31,9 @@ export default function Sidebar (){
 
       <SidebarSettings />
 
-     <SidebarProfile />
+      <SidebarProfileContainer>
+        <AdminProfile />
+      </SidebarProfileContainer>
     </Aside>
   );
 };

@@ -5,7 +5,7 @@ export const lightTheme: AppTheme = {
     primary: '#0f1f3d',
     accent: '#fa812b',
     accentHover: '#d3510b',
-    background: '#faf8f5',
+    background: '#f4f7db',
     secondary: '#ffffff',
     sidebar: '#0a1936',
     sidebarHover: '#637eb4',

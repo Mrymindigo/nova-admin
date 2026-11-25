@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
 export const ProfileContainer = styled.div`
-margin-top:auto;
+display:flex;
+justify-content:start;
+align-items:center;
+gap:${({ theme }) => theme.spacing(1)};
 `

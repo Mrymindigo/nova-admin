@@ -46,3 +46,9 @@ justify-content:center;
 align-items:center;
 padding-top:.5rem;
 color:${({ theme }) => theme.colors.secondary};`
+
+
+export const SidebarProfileContainer = styled.div`
+margin-top:auto;
+padding:${({ theme }) => theme.spacing(4)};
+`

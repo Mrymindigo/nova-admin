@@ -13,5 +13,6 @@ export const GlobalStyle = createGlobalStyle`
     width:100%;
     overflow:hidden;
     text-decoration:none;
+    background: ${({ theme }) => theme.colors.background};
   }
 `;
