@@ -8,6 +8,7 @@ export const fa = {
         loading: 'در حال بارگذاری...',
         retry: 'تلاش مجدد',
         actions: 'عملیات',
+        error: 'خطایی رخ داده است',
     },
     auth: {
         title: 'پنل مدیریت',

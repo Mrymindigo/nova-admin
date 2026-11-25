@@ -9,6 +9,7 @@ export const en = {
         loading: 'Loading...',
         retry: 'Try again',
         actions: 'Actions',
+        error: 'Something went wrong',
     },
     auth: {
         title: 'Admin Panel',
