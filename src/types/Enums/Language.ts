@@ -1,16 +1,16 @@
 
-export const Language = {
-  Fa: "fa",
-  En: "en",
-} as const;
+export enum Language{
+  Fa= "fa",
+  En= "en",
+} 
 
-export type Language =
-  (typeof Language)[keyof typeof Language];
+// export type Language =
+//   (typeof Language)[keyof typeof Language];
 
-export const Direction = {
-  Rtl: "rtl",
-  Ltr: "ltr",
-} as const;
+export enum Direction{
+  Rtl= "rtl",
+  Ltr= "ltr",
+} 
 
-export type Direction =
-  (typeof Direction)[keyof typeof Direction];
+// export type Direction =
+//   (typeof Direction)[keyof typeof Direction];

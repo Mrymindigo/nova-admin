@@ -8,6 +8,7 @@ export const darkTheme: AppTheme = {
     background: '#0b1220',
     secondary: '#273247',
     sidebar: '#faf8f5',
+    sidebarHover:'#637eb4',
     text: '#e2e8f0',
     textSecondary: '#0f1f3d',
     textMuted: '#94a3b8',
