@@ -1,5 +1,6 @@
 import { useTranslation } from '../../utils/services/useTranslation';
 import type { ProductTableProps } from '../../types/product';
+import { translateCategory } from '../../utils/services/translateCategory';
 import {
   TableCard,
   Table,
@@ -34,7 +35,7 @@ export default function ProductTable({ products }: ProductTableProps) {
                 </ImageBox>
               </Td>
               <TitleCell>{product.title}</TitleCell>
-              <Td>{product.category}</Td>
+             <Td>{translateCategory(t, product.category)}</Td>
               <Td>{product.price}</Td>
             </Tr>
           ))}

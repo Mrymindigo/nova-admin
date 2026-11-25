@@ -54,4 +54,10 @@ export const en = {
         next: 'Next page',
         page: 'Page',
     },
+    categories: {
+        "men's clothing": "Men's clothing",
+        "women's clothing": "Women's clothing",
+        jewelery: 'Jewelry',
+        electronics: 'Electronics',
+    },
 }

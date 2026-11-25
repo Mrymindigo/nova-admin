@@ -21,7 +21,6 @@ export const Th = styled.th`
   text-align: start;
   font-weight: 700;
   white-space: nowrap;
-  overflow: hidden;
   color: ${({ theme }) => theme.colors.text};
   border-bottom: 1px solid ${({ theme }) => theme.colors.border};
 `;
@@ -37,7 +36,7 @@ export const Tr = styled.tr`
 `;
 
 export const Td = styled.td`
-  padding: 0.75rem 1rem;
+  padding: .75rem 1rem;
   vertical-align: middle;
   color: ${({ theme }) => theme.colors.text};
   transition: background 0.2s ease;
@@ -49,14 +48,16 @@ export const TitleCell = styled(Td)`
 `;
 
 export const ImageBox = styled.div`
-  width: 56px;
-  height: 56px;
+  width: 60px;
+  height: 60px;
   display: grid;
   place-items: center;
   padding: 6px;
   background: #ffffff;
   border: 1px solid ${({ theme }) => theme.colors.border};
   border-radius: ${({ theme }) => theme.radius.md};
+  overflow: hidden;
+  object-fit: cover;
 `;
 
 export const ProductImage = styled.img`

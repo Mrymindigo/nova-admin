@@ -58,7 +58,7 @@ npm install
 🚧 In progress
 
 ## Time Spent
-🚧 In progress
+🚧 Day1: 6 hours
 
 ## Screenshots
 🚧 In progress

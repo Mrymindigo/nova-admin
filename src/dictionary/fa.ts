@@ -53,4 +53,10 @@ export const fa = {
         next: 'صفحه بعد',
         page: 'صفحه',
     },
+    categories: {
+        "men's clothing": 'پوشاک مردانه',
+        "women's clothing": 'پوشاک زنانه',
+        jewelery: 'زیورآلات',
+        electronics: 'کالای دیجیتال',
+    },
 };

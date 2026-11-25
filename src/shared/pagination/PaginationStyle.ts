@@ -4,7 +4,7 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
+  gap: .5rem;
 `;
 
 export const PageButton = styled.button<{ $active?: boolean }>`
