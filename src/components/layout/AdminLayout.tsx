@@ -1,20 +1,21 @@
-import React from 'react'
 import { Outlet } from 'react-router'
-import Sidebar from './Sidebar'
+import Sidebar from './sidebar'
 import Header from './Header'
+
+import { Main } from './AdminLayoutStyle'
 
 export default function AdminLayout() {
   return (
     <>
-    <main>
+      <Main>
         <Sidebar />
         <section>
-            <Header />
-            <div>
-                <Outlet />
-            </div>
+          <Header />
+          <div>
+            <Outlet />
+          </div>
         </section>
-    </main>
+      </Main>
     </>
   )
 }

@@ -1,4 +1,4 @@
-export const DarkLightMode = {
-    Light : 'light',
-    Dark:'dark'
-}as const
+export enum DarkLightMode {
+  Light = 'light',
+  Dark = 'dark',
+}

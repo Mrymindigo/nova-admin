@@ -18,9 +18,11 @@ export const fa = {
         invalidCredentials: 'نام کاربری یا رمز عبور اشتباه است',
     },
     nav: {
+        dashboard: 'داشبورد',
         products: 'محصولات',
         users: 'کاربران',
         settings: 'تنظیمات',
+        closeMenu: 'Close menu',
     },
     products: {
         title: 'محصولات',
@@ -33,6 +35,12 @@ export const fa = {
             price: 'قیمت',
             category: 'دسته‌بندی',
         },
+    },
+    settings: {
+        lightMode: 'حالت روشن',
+        darkMode: 'حالت تیره',
+        language: 'زبان',
+        languageNames: { fa: 'FA', en: 'EN' },
     },
     validation: {
         required: 'این فیلد الزامی است',

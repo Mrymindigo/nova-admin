@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Sidebar() {
+export default function index() {
   return (
     <div>
-      sidebar
+      setting
     </div>
   )
 }

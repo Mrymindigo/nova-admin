@@ -5,4 +5,5 @@ export const RoutePath = {
   Dashboard: '/',
   Products: '/products',
   Users: '/users',
+  Setting:'/setting'
 } as const;

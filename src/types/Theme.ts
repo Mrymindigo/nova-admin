@@ -1,13 +1,14 @@
 export interface AppTheme {
   colors: {
-    primary: string;       
+    primary: string;
     accent: string; //btn
     accentHover: string;
-    background: string;    
-    secondary: string;    
+    background: string;
+    secondary: string;
     sidebar: string;
+    sidebarHover: string;
     text: string;
-    textSecondary:string;
+    textSecondary: string;
     textMuted: string;
     border: string;
     success: string;

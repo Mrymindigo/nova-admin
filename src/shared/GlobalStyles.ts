@@ -9,5 +9,9 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-family: 'Vazirmatn Variable', sans-serif;
     line-height: 1.6;
+    height:100vh;
+    width:100%;
+    overflow:hidden;
+    text-decoration:none;
   }
 `;

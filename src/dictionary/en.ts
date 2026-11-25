@@ -19,9 +19,11 @@ export const en = {
         invalidCredentials: 'Invalid username or password',
     },
     nav: {
+        dashboard: 'Dashboard',
         products: 'Products',
         users: 'Users',
         settings: 'Settings',
+        closeMenu: 'Close menu',
     },
     products: {
         title: 'Products',
@@ -34,6 +36,12 @@ export const en = {
             price: 'Price',
             category: 'Category',
         },
+    },
+    settings: {
+        lightMode: 'Light mode',
+        darkMode: 'Dark mode',
+        language: 'Language',
+        languageNames: { fa: 'FA', en: 'EN' },
     },
     validation: {
         required: 'This field is required',
