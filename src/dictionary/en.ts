@@ -49,4 +49,9 @@ export const en = {
         invalidEmail: 'Invalid email address',
         minLength: 'Must be at least {{min}} characters',
     },
+    pagination: {
+        previous: 'Previous page',
+        next: 'Next page',
+        page: 'Page',
+    },
 }

@@ -1,0 +1,66 @@
+import styled from 'styled-components';
+
+export const TableCard = styled.div`
+display: flex;
+width: 90%;
+justify-content: center;
+align-items: center;
+margin: 2rem 0 2rem 0;
+background: ${({ theme }) => theme.colors.secondary};
+border: 1px solid ${({ theme }) => theme.colors.border};
+border-radius: ${({ theme }) => theme.radius.lg};
+`;
+
+export const Table = styled.table`
+  width: 100%;
+  border-collapse: collapse;
+`;
+
+export const Th = styled.th`
+  padding: 1rem;
+  text-align: start;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  color: ${({ theme }) => theme.colors.text};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.border};
+`;
+
+export const Tr = styled.tr`
+  &:not(:last-child) td {
+    border-bottom: 1px solid ${({ theme }) => theme.colors.border};
+  }
+
+  &:hover td {
+    background: ${({ theme }) => theme.colors.background};
+  }
+`;
+
+export const Td = styled.td`
+  padding: 0.75rem 1rem;
+  vertical-align: middle;
+  color: ${({ theme }) => theme.colors.text};
+  transition: background 0.2s ease;
+`;
+
+export const TitleCell = styled(Td)`
+  max-width: 320px;
+  font-weight: 600;
+`;
+
+export const ImageBox = styled.div`
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  padding: 6px;
+  background: #ffffff;
+  border: 1px solid ${({ theme }) => theme.colors.border};
+  border-radius: ${({ theme }) => theme.radius.md};
+`;
+
+export const ProductImage = styled.img`
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+`;

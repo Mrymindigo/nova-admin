@@ -48,4 +48,9 @@ export const fa = {
         invalidEmail: 'ایمیل نامعتبر است',
         minLength: 'حداقل {{min}} کاراکتر وارد کنید',
     },
+    pagination: {
+        previous: 'صفحه قبل',
+        next: 'صفحه بعد',
+        page: 'صفحه',
+    },
 };

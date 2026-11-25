@@ -2,7 +2,7 @@ import { Outlet } from 'react-router'
 import Sidebar from './sidebar'
 import Header from './header'
 
-import { Main , Section } from './AdminLayoutStyle'
+import { Main , PageBody, Section } from './AdminLayoutStyle'
 
 export default function AdminLayout() {
   return (
@@ -11,9 +11,9 @@ export default function AdminLayout() {
         <Sidebar />
         <Section>
           <Header />
-          <div>
+          <PageBody>
             <Outlet />
-          </div>
+          </PageBody>
         </Section>
       </Main>
     </>
