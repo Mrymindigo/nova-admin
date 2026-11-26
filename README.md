@@ -41,7 +41,7 @@ Status is listed honestly, so you know what to expect.
 ### Installation
 
 ```bash
-git clone <repo-url>
+git clone <https://github.com/Mrymindigo/nova-admin>
 cd nova-admin
 cp .env.example .env
 npm install
