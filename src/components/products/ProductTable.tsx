@@ -15,7 +15,7 @@ import {
   ActionsCell,
   ActionsGroup,
   ActionButton,
-} from './ProductTableStyle';
+} from '../../shared/table/TableStyle';
 
 export default function ProductTable({ products, onView, onEdit, onDelete }: ProductTableProps) {
   const { t, language } = useTranslation();

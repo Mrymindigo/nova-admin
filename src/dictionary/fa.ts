@@ -102,4 +102,18 @@ export const fa = {
         jewelery: 'زیورآلات',
         electronics: 'کالای دیجیتال',
     },
+
+    //users page
+    users: {
+        title: 'کاربران',
+        searchPlaceholder: 'جستجو در کاربران...',
+        empty: 'کاربری یافت نشد',
+        noResults: 'کاربری با این جستجو پیدا نشد',
+        columns: {
+            name: 'نام',
+            username: 'نام کاربری',
+            email: 'ایمیل',
+            phone: 'شماره تماس',
+        },
+    },
 };

@@ -103,4 +103,19 @@ export const en = {
         jewelery: 'Jewelry',
         electronics: 'Electronics',
     },
+
+
+    //users page
+    users: {
+        title: 'Users',
+        searchPlaceholder: 'Search users...',
+        empty: 'No users found',
+        noResults: 'No users match your search',
+        columns: {
+            name: 'Name',
+            username: 'Username',
+            email: 'Email',
+            phone: 'Phone',
+        },
+    },
 }
