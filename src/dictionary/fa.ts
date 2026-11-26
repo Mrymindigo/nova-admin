@@ -103,7 +103,6 @@ export const fa = {
         electronics: 'کالای دیجیتال',
     },
 
-    //users page
     users: {
         title: 'کاربران',
         searchPlaceholder: 'جستجو در کاربران...',
@@ -116,4 +115,10 @@ export const fa = {
             phone: 'شماره تماس',
         },
     },
+
+    profile:{
+        name:'ادمین سایت',
+    }
+
+
 };

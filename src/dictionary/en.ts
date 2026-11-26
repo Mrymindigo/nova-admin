@@ -1,3 +1,4 @@
+import Profile from "../components/layout/profile";
 
 export type Dictionary = typeof en;
 
@@ -105,7 +106,6 @@ export const en = {
     },
 
 
-    //users page
     users: {
         title: 'Users',
         searchPlaceholder: 'Search users...',
@@ -118,4 +118,8 @@ export const en = {
             phone: 'Phone',
         },
     },
+
+    profile:{
+        name:'System Admin',
+    }
 }

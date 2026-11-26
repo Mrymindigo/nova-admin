@@ -1,10 +1,10 @@
 import { useTranslation } from '../../../utils/services/useTranslation';
 import { menuItems } from './SidebarMenuItem';
 import SidebarSettings from './setting/index';
-import AdminProfile from '../profile/index';
-import { Aside, SidebarNav, Logo, LogoIcon, LogoText ,SidebarProfileContainer } from './SidebarStyle';
-
+import Profile from '../profile/index';
+import { Aside, SidebarNav, Logo, LogoIcon, LogoText, SidebarProfileContainer } from './SidebarStyle';
 import { HiMiniShoppingBag } from "react-icons/hi2";
+import profileImg from "../../../assets/images/profile-photo.jpg"
 
 export default function Sidebar() {
   const { t } = useTranslation();
@@ -32,7 +32,13 @@ export default function Sidebar() {
       <SidebarSettings />
 
       <SidebarProfileContainer>
-        <AdminProfile />
+        <Profile
+          src= {profileImg}
+          alt="User profile"
+          name={t.profile.name}
+          width={40}
+          height={40}
+        />
       </SidebarProfileContainer>
     </Aside>
   );
