@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const TableCard = styled.div`
 display: flex;
-width: 90%;
+width: 100%;
 justify-content: center;
 align-items: center;
 margin: 2rem 0 2rem 0;

@@ -1,17 +1,22 @@
 
 import { useEffect, useState } from 'react';
+import { LuPlus } from 'react-icons/lu';
 import ProductTable from '../../components/products/ProductTable';
 import ProductDetailsModal from '../../modals/productDetails';
 import ConfirmDeleteModal from '../../modals/confirmDelete';
+import AddProductModal from '../../modals/addProduct';
 import Pagination from '../../shared/pagination';
 import SearchInput from '../../shared/searchInput';
 import { getProducts, deleteProduct } from '../../utils/services/productService';
 import { filterProducts } from '../../utils/services/filterProducts';
+import { getNextProductId } from '../../utils/services/getNextProductId';
 import { paginate, getTotalPages } from '../../utils/services/paginate';
 import { useTranslation } from '../../utils/services/useTranslation';
 import { PRODUCTS_PAGE_SIZE } from '../../utils/pagination';
 import type { Product } from '../../types/product';
-import { Wrapper, Toolbar, EmptyMessage } from './Style';
+import { Wrapper, Toolbar, AddButton, SuccessNotice, EmptyMessage } from './Style';
+
+const NOTICE_DURATION_MS = 4000;
 
 const ProductsPage = () => {
   const { t } = useTranslation();
@@ -22,11 +27,13 @@ const ProductsPage = () => {
   const [query, setQuery] = useState('');
   const [page, setPage] = useState(1);
 
-  // state مربوط به دو پنجره
   const [viewedProduct, setViewedProduct] = useState<Product | null>(null);
   const [productToDelete, setProductToDelete] = useState<Product | null>(null);
   const [isDeleting, setIsDeleting] = useState(false);
   const [hasDeleteError, setHasDeleteError] = useState(false);
+
+  const [isAddOpen, setIsAddOpen] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
 
   useEffect(() => {
     const load = async () => {
@@ -41,9 +48,24 @@ const ProductsPage = () => {
     load();
   }, []);
 
+  
+  useEffect(() => {
+    if (!showSuccess) return;
+    const timer = setTimeout(() => setShowSuccess(false), NOTICE_DURATION_MS);
+    return () => clearTimeout(timer);
+  }, [showSuccess]);
+
   const handleSearchChange = (value: string) => {
     setQuery(value);
     setPage(1);
+  };
+
+  const handleCreated = (created: Product) => {
+    setProducts((current) => [{ ...created, id: getNextProductId(current) }, ...current]);
+    setQuery('');
+    setPage(1);
+    setIsAddOpen(false);
+    setShowSuccess(true);
   };
 
   const openDeleteModal = (product: Product) => {
@@ -62,7 +84,6 @@ const ProductsPage = () => {
     setHasDeleteError(false);
     try {
       await deleteProduct(productToDelete.id);
-      // API ذخیره واقعی نمی‌کند؛ از state حذف می‌کنیم
       setProducts((current) => current.filter((item) => item.id !== productToDelete.id));
       setProductToDelete(null);
     } catch {
@@ -74,11 +95,10 @@ const ProductsPage = () => {
 
   if (isLoading) return <p>{t.common.loading}</p>;
   if (hasError) return <p>{t.common.error}</p>;
-  if (products.length === 0) return <p>{t.products.empty}</p>;
 
   const filteredProducts = filterProducts(products, query);
   const totalPages = getTotalPages(filteredProducts.length, PRODUCTS_PAGE_SIZE);
-  const currentPage = Math.min(page, totalPages); // بعد از حذف، از آخرین صفحه بیرون نزن
+  const currentPage = Math.min(page, totalPages);
   const visibleProducts = paginate(filteredProducts, currentPage, PRODUCTS_PAGE_SIZE);
 
   return (
@@ -90,9 +110,17 @@ const ProductsPage = () => {
           placeholder={t.products.searchPlaceholder}
           ariaLabel={t.common.search}
         />
+        <AddButton type="button" onClick={() => setIsAddOpen(true)}>
+          <LuPlus aria-hidden="true" />
+          {t.products.addButton}
+        </AddButton>
       </Toolbar>
 
-      {filteredProducts.length === 0 ? (
+      {showSuccess && <SuccessNotice role="status">{t.products.form.success}</SuccessNotice>}
+
+      {products.length === 0 ? (
+        <EmptyMessage>{t.products.empty}</EmptyMessage>
+      ) : filteredProducts.length === 0 ? (
         <EmptyMessage>{t.products.noResults}</EmptyMessage>
       ) : (
         <>
@@ -103,6 +131,10 @@ const ProductsPage = () => {
           />
           <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={setPage} />
         </>
+      )}
+
+      {isAddOpen && (
+        <AddProductModal onClose={() => setIsAddOpen(false)} onCreated={handleCreated} />
       )}
 
       {viewedProduct && (
