@@ -1,8 +1,7 @@
 import { dictionaries } from '../../dictionary/index';
-import { Language } from '../../types/Enums/Language';
+import { useAppSelector } from '../../redux/hooks';
 
 export const useTranslation = () => {
-    //replace redux
-    const language = Language.Fa;
+    const language = useAppSelector((state) => state.settings.language);
     return { t: dictionaries[language], language };
 };
