@@ -24,11 +24,11 @@ Status is listed honestly, so you know what to expect.
 - [x] Users list (API data, search, loading / error / empty / no-results states)
 - [x] FA/EN dictionary with a typed `Dictionary` shared by both languages
 - [x] Light/Dark theme tokens, applied through `ThemeProvider`
-- [ ] Login against `/auth/login` with token handling 🚧
-- [ ] Route protection bound to auth state (currently a placeholder) 🚧
-- [ ] User create form 🚧
-- [ ] Redux Toolkit slices for theme, language, auth and lists 🚧
-- [ ] Working theme and language switchers (UI is in place, not yet connected) 🚧
+- [ ] Login against `/auth/login` with token handling 
+- [ ] Route protection bound to auth state (currently a placeholder) 
+- [ ] User create form 
+- [ ] Redux Toolkit slices for theme, language, auth and lists 
+- [ ] Working theme and language switchers (UI is in place, not yet connected) 
 - [ ] Edit product (button present but disabled; out of scope per the brief)
 
 ## Getting Started
@@ -142,7 +142,7 @@ names in the brief, to stay consistent across case-sensitive file systems.
 - The admin panel is desktop-only (minimum width 1280px), as allowed by the brief.
 - View and delete product actions were added beyond the brief; delete only
   affects local state because the API does not persist it.
-- Edit product is intentionally disabled (not required by the brief).
+- Edit product is intentionally disabled.
 - Fonts are installed through `@fontsource-variable/vazirmatn` instead of
   committing font files to `assets/fonts`. It keeps the repo light and makes
   updates a one-line change. The folder is kept to match the required structure.
@@ -153,8 +153,9 @@ names in the brief, to stay consistent across case-sensitive file systems.
 
 ## Time Spent
 
-🚧 To be filled in before submission (hours per day and per area).
+-Day 1 : 6 hours.
+-Day 2 : 11 hours .
 
 ## Screenshots
 
-🚧 To be added: login, products (light / dark, FA / EN), users, add-product form.
+ To be added
