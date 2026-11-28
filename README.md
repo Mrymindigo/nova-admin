@@ -5,7 +5,7 @@
 Admin panel for the NOVA online store, built as part of a frontend technical
 challenge. It uses [FakeStoreAPI](https://fakestoreapi.com) as a mock backend.
 
-Companion project: **NOVA Store** (Next.js storefront), `<link-to-nova-store-repo>`.
+Companion project: **NOVA Store** (Next.js storefront), `<https://github.com/Mrymindigo/nova-store>`.
 
 ## Tech Stack
 
