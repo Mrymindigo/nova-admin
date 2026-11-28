@@ -158,4 +158,6 @@ names in the brief, to stay consistent across case-sensitive file systems.
 
 ## Screenshots
 
- To be added
+ | Admin (FA, light) | Admin (EN, light) | Admin (FA, dark)
+|---|---|
+| ![Adimin FA](docs/admin-fa-light.png) | ![Admin EN](docs/admin-en-light.png) | ![Admin FA](docs/admin-fa-dark.png)|
